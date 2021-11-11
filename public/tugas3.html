@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title>myITS Classroom: Log in to the site</title>
+    <!-- button -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- stacked form -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url(background.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .side-bar {
+            position: fixed; 
+            padding: 30px 40px;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            left: 72%;
+            background-color: rgb(255, 255, 255);
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        .button {
+            background-color: rgb(0, 51, 102);
+            color: white;
+            padding: 1px 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .socmed {
+            paading: 3px 8px ;
+            text-align: center;
+        }
+        .footer {
+            position: fixed; 
+            top: 90%;
+            left: 15;
+            text-align: left;
+        }
+        a:link, a:visited {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        a:hover, a:active {
+            color: rgb(1, 1, 255);
+            text-decoration: none;
+        }
+        a.one:link, a.one:visited {color:royalblue;}
+        a.one:visited, a.one:hover {color:#0000ff;}
+        span {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="side-bar">
+        <img src="https://classroom.its.ac.id/pluginfile.php/1/theme_remui/logo/1631627896/myits-classroom-blue.png" alt="myITS Classroom" class="center">
+        
+        <hr>
+        
+        <p><h4>Sign In</h4></p>
+        Log in using your account on:</p>
+        
+        <div class="button">
+            <img src="https://classroom.its.ac.id/theme/image.php/remui/auth_oidc/1631627896/0/customicon" width="24" height="24">
+            <a href="https://classroom.its.ac.id/auth/oidc/" button class="btn"></i>Masuk dengan myITS</button></a>
+        </div>
+       
+        <br>
+        <p><h4> Sign In </h4></p>
+
+        <div class="container">
+            <form action="/action_page.php">
+              <div class="form-group">
+                <input type="username" class="form-control" id="usn" placeholder="Username" name="uname">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="pwd" placeholder="Password" name="pswd">
+              </div>
+              <div class="form-group form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="remember"> Remember username
+                </label>
+                <span class="psw"><a class="one" href="https://classroom.its.ac.id/login/forgot_password.php">Forget password</a></span>
+              </div>
+            </form>
+        </div>
+          
+        <div class="button">
+            <a href="https://classroom.its.ac.id/auth/oidc/" button class="btn"></i>Log in</button></a> 
+        </div>
+        
+        <br> <br> 
+        <p class="socmed">Follow Us 
+            <br>
+            <a href="https://id-id.facebook.com/InstitutTeknologiSepuluhNopember/" class="fa fa-facebook btn btn-primary btn-icon btn-floating"></a>
+            <a href="https://twitter.com/its_campus" class="fa fa-twitter btn btn-info btn-icon btn-floating"></a>
+            <a href="https://www.instagram.com/its_campus/" class="fa fa-instagram btn btn-primary btn-icon btn-floating"></a>
+            <a href="https://www.youtube.com/user/itseurekatv" class="fa fa-youtube btn btn-danger btn-icon btn-floating"></a>
+        </p>
+        </div>
+
+    <div class="footer">
+        <a href="https://classroom.its.ac.id/">Home</a>
+        <br> 
+        <a href="https://download.moodle.org/mobile?version=2019111801.07&lang=en&iosappid=633359593&androidappid=com.moodle.moodlemobile">Get the mobile app</a>
+    </div>
+</body>
+
+
+
