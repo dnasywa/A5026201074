@@ -15,9 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('ETS', function () {
-    return view('htmlets');
+// cara 2
+
+Route::get('tugas4', function () {
+    return view('formValidasi');
 });
 
-// Route::get('isiannama',"ViewController") ;
-// Route::post('greetings',"ViewController");
+Route::get('praktikum2', function () {
+    return view('formRegistrasi');
+});
+
+// cara 3
+
+Route::get('etspweb', "ViewController@showETS") ;
+// Route::post('greetings',"ViewController@resultGreetings");
+
+Route::get('tugasphp', "ViewController@showKonversi") ;

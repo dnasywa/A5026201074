@@ -82,31 +82,24 @@
             <div class="content">
                 <div class="title m-b-md" style="font-size: 50px">
                     Dara Nasywa <br>
-                    (5026201074)
+                    5026201074
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Tugas 1</a>
+                    {{-- cara 1 --}}
+                    <a href="tugas1.html">Tugas 1</a>
                     <a href="tugas2.html">Tugas 2</a>
                     <a href="tugas3.html">Tugas 3</a>
-                    <a href="https://blog.laravel.com">Praktikum 1</a>
-                    <a href="https://nova.laravel.com">Tugas 4</a>
-                    <a href="https://nova.laravel.com">Praktikum 2</a>
-                    <a href="ETS">ETS</a>
-                    <a href="https://github.com/laravel/laravel">Tugas PHP</a>
+                    <a href="praktikum1.html">Praktikum 1</a>
+                    {{-- cara 2 --}}
+                    <a href="tugas4">Tugas 4</a>
+                    <a href="praktikum2">Praktikum 2</a>
+                    {{-- cara 3 --}}
+                    <a href="etspweb">ETS</a>
+                    <a href="tugasphp">Tugas PHP</a>
                 </div>
             </div>
         </div>
     </body>
 </html>
-{{-- function showForm()
-    {
-        //code untuk meload data yg akan dimuat di form
-        return view('showgreetings');
-    }
 
-    function resultGreetings()
-    {
-        //code untuk meload data yg akan dimuat di form
-        return view('tugas');
-    } --}}
