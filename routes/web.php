@@ -26,8 +26,17 @@ Route::get('praktikum2', function () {
 });
 
 // cara 3
-
-Route::get('etspweb', "ViewController@showETS") ;
 // Route::post('greetings',"ViewController@resultGreetings");
-
+Route::get('etspweb', "ViewController@showETS") ;
 Route::get('tugasphp', "ViewController@showKonversi") ;
+
+// route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
+
+// develop mandiri
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::post('/pegawai/update','PegawaiController@update');
+
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
