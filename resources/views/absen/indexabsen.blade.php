@@ -1,19 +1,53 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html>
 <head>
 	<title>CRUD Tabel Absen</title>
 </head>
-<body>
+<body> --}}
 
-	<h2>Daftar Absensi Pegawai</h2>
+    @extends('layout.bahagia')
+
+    @section('title', 'Data Absensi')
+    @section('judulhalaman', 'Daftar Absensi Pegawai')
+
+    @section('konten')
+
+	{{-- <h2>Daftar Absensi Pegawai</h2> --}}
 
 
-	<a href="/absen/add"> + Tambah Absensi</a>
+	<a href="/absen/add"> + Tambah Absensi Baru</a>
+    <br>
 
-	<br/>
-	<br/>
+    <style>
+        .isi-tabel {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
 
-	<table border="1">
+    <table>
+        <tr>
+            <th class="isi-tabel" style="width: 15%">ID Pegawai</th>
+            <th class="isi-tabel" style="width: 25%">Tanggal</th>
+            <th class="isi-tabel" style="width: 15%">Status</th>
+            <th class="isi-tabel" style="width: 15%">Opsi</th>
+        </tr>
+
+        @foreach($absen as $a)
+        <tr>
+            <td class="isi-tabel">{{ $a->IDPegawai }}</td>
+            <td class="isi-tabel">{{ $a->Tanggal }}</td>
+            <td class="isi-tabel">{{ $a->Status }}</td>
+            <td class="isi-tabel">
+                <a href="/absen/edit/{{ $a->ID }}">Edit</a>
+				|
+				<a href="/absen/hapus/{{ $a->ID }}">Hapus</a>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+
+	{{-- <table border="1">
 		<tr>
 
 			<th>IDPegawai</th>
@@ -21,7 +55,8 @@
 			<th>Status</th>
 			<th>Opsi</th>
 		</tr>
-		@foreach($absen as $a)
+
+
 		<tr>
 
 			<td>{{ $a->IDPegawai }}</td>
@@ -33,14 +68,15 @@
 				<a href="/absen/hapus/{{ $a->ID }}">Delete Absensi</a>
 			</td>
 		</tr>
-		@endforeach
-	</table>
+
+
+	</table> --}}
     <p>
         Keterangan Status: <br>
         I : Izin <br>
         S : Sakit <br>
         A : Alpha <br>
         </p>
-
-</body>
-</html>
+@endsection
+{{-- </body>
+</html> --}}
