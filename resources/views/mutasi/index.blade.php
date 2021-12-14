@@ -1,11 +1,3 @@
-{{-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Tugas pembuatan CRUD</title>
-</head>
-<body>
-
-	<h3>Data mutasi</h3> --}}
 
     @extends('layout.bahagia')
 
@@ -23,9 +15,20 @@
         }
     </style>
 
+    <form action="/mutasi/cari" method="GET">
+        <br>
+            <table>
+                <tr>
+                    <td style="width: 100%">  <input type="text" class="form-control" name="cari" placeholder="Telusuri data mutasi Pegawai berdasarkan nama atau departemennya" value="{{ old('cari') }}"> </td>
+                    <td style="padding: 10px"> <input type="submit" class="btn btn-default" value="CARI"> </td>
+                </tr>
+            </table>
+        <br>
+    </form>
+
 	<table>
 		<tr>
-			<th class="isi-tabel" style="width: 15%">ID Pegawai</th>
+			<th class="isi-tabel" style="width: 15%">Nama Pegawai</th> {{-- udah pake join, bukan ID lagi--}}
 			<th class="isi-tabel" style="width: 25%">Departemen</th>
 			<th class="isi-tabel" style="width: 25%">Sub Departemen</th>
 			<th class="isi-tabel" style="width: 20%">Mulai Bertugas</th>
@@ -34,7 +37,7 @@
 
 		@foreach($mutasi as $m)
 		<tr>
-			<td class="isi-tabel">{{ $m->IDPegawai }}</td>
+			<td class="isi-tabel">{{ $m->pegawai_nama }}</td>
 			<td class="isi-tabel">{{ $m->Departemen }}</td>
 			<td class="isi-tabel">{{ $m->SubDepartemen }}</td>
 			<td class="isi-tabel">{{ $m->MulaiBertugas }}</td>
@@ -49,5 +52,3 @@
 	</table>
 @endsection
 
-{{-- </body>
-</html> --}}

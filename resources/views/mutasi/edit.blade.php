@@ -19,7 +19,14 @@
             <tr> <input type="hidden" name="id" value="{{ $m->ID }}"> </tr>
             <tr>
                 <td class="isi-tabel">ID Pegawai</td>
-                <td class="isi-tabel"> <input type="number" required="required" name="IDPegawai" value="{{ $m->IDPegawai }}"> </td>
+                {{-- <td class="isi-tabel"> <input type="number" required="required" name="IDPegawai" value="{{ $m->IDPegawai }}"> </td> --}}
+                <td class="isi-tabel">
+                    <select name="IDPegawai" >
+                        @foreach($pegawai as $p)
+                         <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $m->IDPegawai ) selected="selected" @endif> {{ $p->pegawai_nama }} </option>
+                        @endforeach
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td class="isi-tabel">Departemen</td>

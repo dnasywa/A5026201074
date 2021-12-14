@@ -1,17 +1,9 @@
-{{-- <!DOCTYPE html>
-<html> --}}
 
     @extends('layout.bahagia')
 
     @section('title', 'Menambah Mutasi')
     @section('judulhalaman', 'Menambah Data Mutasi')
     @section('konten')
-
-{{-- <head>
-    <title>Tugas pembuatan CRUD</title>
-</head>
-<body>
-	<h3>Tambah data mutasi</h3> --}}
 
     <style>
         .isi-tabel {
@@ -21,12 +13,20 @@
 
 	<form action="/mutasi/store" method="post">
 		{{ csrf_field() }}
+
         <table>
-            <tr> <input type="hidden" name="id"> </tr>
+            {{-- <tr> <input type="hidden" name="id"> </tr> --}}
             <tr>
                 <td class="isi-tabel">ID Pegawai</td>
-                <td class="isi-tabel">
+                {{-- <td class="isi-tabel">
                     <input type="number" required="required" name="IDPegawai">
+                </td> --}}
+                <td class="isi-tabel">
+                    <select name="IDPegawai"  style="width: 24%">
+                        @foreach($pegawai as $p)
+                            <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }} </option>
+                        @endforeach
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -64,16 +64,9 @@
                 });
             </script>
         </table>
-        {{-- <input type="hidden" name="id"> <br/>
-		ID Pegawai <input type="number" required="required" name="IDPegawai"> <br/>
-		Departemen <input type="text" required="required" name="dept"> <br/>
-		Sub Departemen <input type="text" required="required" name="subDept"> <br/>
-		Mulai Bertugas <input type="datetime-local" required="required" name="bertugas"> <br/><br> --}}
 		<input type="submit" value="Simpan Data">
 	</form>
 
     <br>
 	<a href="/mutasi">Kembali</a>
 @endsection
-{{-- </body>
-</html> --}}

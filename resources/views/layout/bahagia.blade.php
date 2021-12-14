@@ -38,11 +38,36 @@
             text-align: center;
         }
         .menu {
-            padding: 10px 10px;
-            left: 0;
+            width: 160px;
+            border-radius: 15px;
+            position: fixed;
+            z-index: 1;
+            top: 50px;
+            left: 10px;
+            background-color: rgb(14, 12, 72);
+            overflow-x: hidden;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .menu a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            display: block;
+        }
+        .menu a:hover {
+            color: white;
         }
         .content {
-            padding: 5px 5px;
+            margin-left: 180px;
+            margin-right: 20px;
+            font-size: 16px;
+            padding: 0px 10px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
         }
         img {
             height: 110px;
@@ -57,26 +82,55 @@
         <b> Dara Nasywa 5026201074 <b>
     </div>
 
-        <table>
+    <br>
+    <div class="menu">
+        <div class="container-fluid" style="background-color: rgb(14, 12, 72)">
+            <ul class="nav navbar-nav">
+                <li><a href="/pegawai">Pegawai</a></li><br>
+                <li><a href="/absen">Absensi</a></li><br>
+                <li><a href="/mutasi">Mutasi</a></li><br>
+                <li><a href="/unggas">Praktikum</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="card" >
+            <h3>@yield('judulhalaman')</h3>
+
+            @section('konten')
+
+            @show
+        </div>
+    </div>
+
+    <br><br>
+    <div class="footer">
+        © Hak cipta oleh Dara Nasywa - 5026201074
+    </div>
+</body>
+
+</html>
+
+
+        {{-- <table>
             <tr>
-                <td style="width: 20%">
-                    <div class="menu" style="width: 70%">
-                        <nav class="navbar navbar-inverse">
+                <td > KOMEN style="width: 20%"
+                    <div class="menu">
+                        KOMEN <nav class="navbar navbar-inverse">
                             <div class="container-fluid" style="background-color: rgb(14, 12, 72)">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/pegawai">Pegawai</a></li>
-                                    <li><a href="/absen">Absensi</a></li>
-                                    <li><a href="/mutasi">Mutasi</a></li>
-                                    <li><a href="#">Minggu Depan</a></li>
-                                    <li><a href="#">Praktikum</a></li>
+                                    <li><a href="/pegawai">Pegawai</a></li><br>
+                                    <li><a href="/absen">Absensi</a></li><br>
+                                    <li><a href="/mutasi">Mutasi</a></li><br>
+                                    <li><a href="/unggas">Praktikum</a></li>
                                 </ul>
                             </div>
-                        </nav>
+                        KOMEN </nav>
                     </div>
                 </td>
 
-                <td style="width: 80%">
+                <td> KOMEN style="width: 80%"
                     <div class="content">
                         <div class="card" >
                             <h3>@yield('judulhalaman')</h3>
@@ -88,12 +142,4 @@
                     </div>
                 </td>
             </tr>
-        </table>
-
-    <br><br>
-    <div class="footer">
-        © Hak cipta oleh Dara Nasywa - 5026201074
-    </div>
-</body>
-
-</html>
+        </table> --}}

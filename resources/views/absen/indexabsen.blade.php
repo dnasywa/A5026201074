@@ -1,9 +1,3 @@
-{{-- <!DOCTYPE html>
-<html>
-<head>
-	<title>CRUD Tabel Absen</title>
-</head>
-<body> --}}
 
     @extends('layout.bahagia')
 
@@ -11,9 +5,6 @@
     @section('judulhalaman', 'Daftar Absensi Pegawai')
 
     @section('konten')
-
-	{{-- <h2>Daftar Absensi Pegawai</h2> --}}
-
 
 	<a href="/absen/add"> + Tambah Absensi Baru</a>
     <br>
@@ -25,17 +16,28 @@
         }
     </style>
 
+    <form action="/absen/cari" method="GET">
+        <br>
+        <table>
+            <tr>
+                <td style="width: 100%"> <input type="text" class="form-control" name="cari" placeholder="Telusuri data absensi Pegawai berdasarkan status ketidakhadirannya" value="{{ old('cari') }}"> </td>
+                <td style="padding: 10px"> <input type="submit" class="btn btn-default" value="CARI"> </td>
+            </tr>
+        </table>
+        <br>
+    </form>
+
     <table>
         <tr>
-            <th class="isi-tabel" style="width: 15%">ID Pegawai</th>
-            <th class="isi-tabel" style="width: 25%">Tanggal</th>
+            <th class="isi-tabel" style="width: 15%">Nama Pegawai</th> {{-- udah pake join, bukan ID lagi--}}
+            <th class="isi-tabel" style="width: 20%">Tanggal</th>
             <th class="isi-tabel" style="width: 15%">Status</th>
             <th class="isi-tabel" style="width: 15%">Opsi</th>
         </tr>
 
         @foreach($absen as $a)
         <tr>
-            <td class="isi-tabel">{{ $a->IDPegawai }}</td>
+            <td class="isi-tabel">{{ $a->pegawai_nama }}</td>
             <td class="isi-tabel">{{ $a->Tanggal }}</td>
             <td class="isi-tabel">{{ $a->Status }}</td>
             <td class="isi-tabel">
@@ -46,37 +48,11 @@
         </tr>
         @endforeach
     </table>
+    {{ $absen->links() }}
 
-	{{-- <table border="1">
-		<tr>
-
-			<th>IDPegawai</th>
-			<th>Tanggal</th>
-			<th>Status</th>
-			<th>Opsi</th>
-		</tr>
-
-
-		<tr>
-
-			<td>{{ $a->IDPegawai }}</td>
-			<td>{{ $a->Tanggal }}</td>
-			<td>{{ $a->Status }}</td>
-			<td>
-				<a href="/absen/edit/{{ $a->ID }}">Edit Absensi</a>
-				|
-				<a href="/absen/hapus/{{ $a->ID }}">Delete Absensi</a>
-			</td>
-		</tr>
-
-
-	</table> --}}
+    <br>
     <p>
         Keterangan Status: <br>
-        I : Izin <br>
-        S : Sakit <br>
-        A : Alpha <br>
-        </p>
+        I : Izin | S : Sakit | A : Alpha
+    </p>
 @endsection
-{{-- </body>
-</html> --}}
