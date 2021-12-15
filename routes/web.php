@@ -69,3 +69,10 @@ Route::post('/unggas/update', 'UnggasController@update');
 Route::get('/unggas/hapus/{id}', 'UnggasController@hapus');
 Route::get('/unggas/view/{id}', 'UnggasController@detail');
 Route::get('/unggas/cari', 'UnggasController@cari');
+
+//route CRUD karyawan1
+Route::get('/karyawan1', 'karyawan1Controller@index');
+Route::post('/karyawan1/store', 'karyawan1Controller@store');
+Route::get('/karyawan1/edit/{id}', 'karyawan1Controller@edit');
+Route::post('/karyawan1/update', 'karyawan1Controller@update');
+Route::get('/karyawan1/view/{id}', 'karyawan1Controller@detail');

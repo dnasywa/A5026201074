@@ -89,7 +89,8 @@
                 <li><a href="/pegawai">Pegawai</a></li><br>
                 <li><a href="/absen">Absensi</a></li><br>
                 <li><a href="/mutasi">Mutasi</a></li><br>
-                <li><a href="/unggas">Praktikum</a></li>
+                <li><a href="/unggas">Praktikum</a></li><br>
+                <li><a href="/karyawan1">EAS</a></li>
             </ul>
         </div>
     </div>
